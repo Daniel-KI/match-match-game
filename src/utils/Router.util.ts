@@ -69,6 +69,7 @@ export default class Router {
       }
       if (!isAuthorized) {
         this.updatePageByUrl('about', 'about', routes.about.path);
+        return;
       }
     }
     this.currentRoute.render(Router.renderNode);

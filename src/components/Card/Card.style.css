@@ -1,0 +1,66 @@
+.card {
+  cursor: pointer;
+  position: relative;
+  perspective: 20rem;
+  transition: all 0.5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card:hover > .card__back {
+  transform: translateZ(1rem);
+  box-shadow:
+  0 0 0.2rem rgb(255, 255, 255),
+  0 0 0.2rem rgba(255, 255, 255, .6),
+  0 0 0.4rem rgba(255, 255, 255, .6);
+}
+.card__front,
+.card__back {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  backface-visibility: hidden;
+  transition: all 0.7s linear;
+}
+.card__back {
+  transform: rotateY(0deg);
+}
+.card__front {
+  transform: rotateY(180deg);
+  background-color: rgba(0,0,0,0.5);
+}
+.card__image_back {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.card__image_front {
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+}
+.card_flipped {
+  pointer-events: none !important;
+}
+.card_flipped > .card__front {
+  transform: rotateY(0deg) !important;
+}
+.card_flipped > .card__back {
+  transform: rotateY(-180deg) !important;
+}
+.card__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card_correct-match .card__mask {
+  background-color: rgba(19, 171, 67, 0.551);
+}
+.card_wrong-match .card__mask {
+  background-color: rgba(171, 37, 19, 0.551);
+}

@@ -1,0 +1,78 @@
+.game {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/images/space/mars.jpg") #d46541 center;
+  background-repeat: repeat-x;
+  background-size: cover;
+  animation: moveBg 300s linear infinite;
+}
+.game__controller {
+  display: flex;
+}
+.game__btn {
+  height: 2rem;
+  width: 7rem;
+  border-radius: 5px;
+  border: 1px solid var(--text-color);
+  margin: 0.3rem;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 200;
+  transition: 0.5s linear;
+}
+.game__btn:hover {
+  color: var(--text-focused-color);
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.game__field {
+  flex-wrap: wrap;
+  margin: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.game__field_disable {
+  pointer-events: none;
+}
+.game__field_small {
+  width: 60vh;
+  max-width: 90vw;
+  height: 30vh;
+  max-height: 50vw;
+}
+.game__field_small .card {
+  width: 25%;
+  height: 50%;
+}
+.game__field_medium {
+  width: 55vh;
+  max-width: 90vw;
+  height: 55vh;
+  max-height: 90vw;
+}
+.game__field_medium .card {
+  width: 25%;
+  height: 25%;
+}
+.game__field_big {
+  width: 55vh;
+  max-width: 90vw;
+  height: 55vh;
+  max-height: 90vw;
+}
+.game__field_big .card {
+  width: 16%;
+  height: 16%;
+}
+

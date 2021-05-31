@@ -1,0 +1,79 @@
+.score {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/images/space/milky_way.jpg") black center;
+  background-repeat: repeat-x;
+  background-size: cover;
+  animation: moveBg 300s linear infinite;
+}
+.score__container {
+  width: 55%;  
+}
+.score__title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.score__table-container {
+  display: flex;
+  justify-content: center;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+.score__table {
+  width: 100%;
+  font-size: 1rem;
+  border-collapse: collapse;
+  color: var(--text-color);
+}
+.score__table-body {
+  transition: 0.5s;
+}
+.score__table-body:hover {
+  cursor: pointer;
+  color: var(--text-focused-color);
+  text-shadow:
+  0 0 0.2rem rgb(255, 255, 255),
+  0 0 0.2rem rgba(255, 255, 255, .6),
+  0 0 0.4rem rgba(255, 255, 255, .6);
+}
+.score_table-cell {
+  font-weight: 200;
+  border-bottom: 1px solid var(--text-color);
+}
+.score__avatar-img {
+  object-fit: cover;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+.score__full-name {
+  border: none;
+}
+.score__email {
+  font-size: 0.7rem;
+}
+.score__points {
+  font-size: 1.3rem;
+}
+.score__empty-info {
+  font-weight: 200;
+  text-align: center;
+}
+
+@media(max-width: 900px) {
+
+  .score__container {
+      width: 80%;
+  }
+  
+}

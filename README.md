@@ -1,5 +1,7 @@
 # Match match game 🎮
 
+![image](https://user-images.githubusercontent.com/75856314/126192931-fd0bd6fe-3382-4bb6-9750-385ef484b82a.png)
+
 ## Описание:
 - Использован webpack, ts, eslint, prettier
 - Используется indexedDb (регистрация и хранение рекордов игроков)
